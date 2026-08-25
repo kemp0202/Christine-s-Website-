@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wild Olive Tree — Handmade Tinctures &amp; Ointments</title>
+<meta name="description" content="Small-batch herbal tinctures and ointments, made by hand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top">
+      <!-- MOM: replace logo.png with your actual logo file (in this same folder) -->
+      <img class="wordmark-logo" src="logo.png" alt="" onerror="this.style.display='none'">
+      <span>The Wild Olive Tree</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#apothecary">Apothecary</a>
+      <a href="#process">How it's made</a>
+      <a href="#about">The maker</a>
+      <a href="#order">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Small-batch · hand-poured · Burley, Idaho</p>
+      <h1>Herbs, steeped slow<br>and bottled honest.</h1>
+      <p class="hero-sub">
+        Every tincture is dropped, not poured. Every ointment is stirred,
+        not machined. <!-- MOM: swap in a line about why you started this --> 
+        This is medicine cabinet stuff made the way it used to be made.
+      </p>
+      <a class="btn btn-primary" href="#order">See what's in stock</a>
+    </div>
+
+    <!-- signature element: a bottle rendered as a label, doubling as a nav anchor -->
+    <div class="hero-bottle" aria-hidden="true">
+      <svg viewBox="0 0 220 340" xmlns="http://www.w3.org/2000/svg">
+        <rect x="70" y="30" width="80" height="40" rx="6" fill="var(--color-glass-dark)"/>
+        <rect x="85" y="10" width="50" height="26" rx="4" fill="var(--color-amber-deep)"/>
+        <path d="M60 70 h100 a10 10 0 0 1 10 10 v230 a20 20 0 0 1 -20 20 h-80 a20 20 0 0 1 -20 -20 v-230 a10 10 0 0 1 10 -10 z"
+              fill="var(--color-amber)" stroke="var(--color-ink)" stroke-width="2"/>
+        <rect x="46" y="150" width="128" height="110" rx="4" fill="var(--color-parchment)" stroke="var(--color-ink)" stroke-width="1.5"/>
+        <text x="110" y="185" text-anchor="middle" class="label-svg-title">VALERIAN</text>
+        <text x="110" y="203" text-anchor="middle" class="label-svg-sub">ROOT TINCTURE</text>
+        <line x1="66" y1="215" x2="154" y2="215" stroke="var(--color-ink)" stroke-width="1"/>
+        <text x="110" y="232" text-anchor="middle" class="label-svg-mono">1 FL OZ · 30ML</text>
+        <text x="110" y="248" text-anchor="middle" class="label-svg-mono">BATCH NO. 014</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APOTHECARY / PRODUCTS ============ -->
+<section class="apothecary" id="apothecary">
+  <div class="wrap">
+    <p class="eyebrow">The apothecary</p>
+    <h2>What's on the shelf</h2>
+    <p class="section-lede">
+      <!-- MOM: this is a placeholder grid — duplicate a .product-card for each item you sell -->
+      Tap a label for what's inside, what it's for, and how to use it.
+    </p>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-label">
+          <span class="product-eyebrow">Tincture</span>
+          <h3>Valerian Root</h3>
+          <p class="product-mono">For rest · 1 oz</p>
+        </div>
+        <p class="product-note">Wild-harvested root, steeped 6 weeks in cane alcohol.</p>
+        <p class="product-price">$18</p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-label">
+          <span class="product-eyebrow">Tincture</span>
+          <h3>Elderberry</h3>
+          <p class="product-mono">For immunity · 1 oz</p>
+        </div>
+        <p class="product-note">Organic elderberry, clove, and a touch of raw honey.</p>
+        <p class="product-price">$16</p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-label">
+          <span class="product-eyebrow">Ointment</span>
+          <h3>Calendula Salve</h3>
+          <p class="product-mono">For skin · 2 oz tin</p>
+        </div>
+        <p class="product-note">Calendula-infused olive oil, beeswax, a little lavender.</p>
+        <p class="product-price">$14</p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-label">
+          <span class="product-eyebrow">Ointment</span>
+          <h3>Arnica Rub</h3>
+          <p class="product-mono">For sore muscles · 2 oz tin</p>
+        </div>
+        <p class="product-note">Arnica flower, cayenne, and menthol crystal.</p>
+        <p class="product-price">$15</p>
+      </article>
+
+      <!-- MOM: duplicate the <article class="product-card">…</article> block above for more items -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <p class="eyebrow">How it's made</p>
+    <h2>From plant to dropper</h2>
+    <div class="process-row">
+      <div class="process-step">
+        <p class="process-mono">STEP 1</p>
+        <h3>Harvest &amp; dry</h3>
+        <p>Herbs are cut at peak potency and air-dried out of direct light.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-mono">STEP 2</p>
+        <h3>Steep</h3>
+        <p>Plant matter sits in alcohol or oil for 4–6 weeks, shaken daily.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-mono">STEP 3</p>
+        <h3>Strain &amp; press</h3>
+        <p>The spent herb is pressed out, keeping every drop of the good stuff.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-mono">STEP 4</p>
+        <h3>Bottle &amp; label</h3>
+        <p>Hand-labeled with the batch number and the day it was bottled.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-inner">
+    <div class="about-photo" aria-hidden="true">
+      <!-- MOM: replace this block with <img src="your-photo.jpg" alt="…"> -->
+      <div class="photo-placeholder">photo goes here</div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">The maker</p>
+      <h2>Hi, I'm [Mom's Name].</h2>
+      <p>
+        <!-- MOM: your story goes here — how you got into this, how long you've been doing it,
+             where you're based, whatever feels true. A couple short paragraphs is plenty. -->
+        I've been making tinctures and salves out of my kitchen for [X years], starting
+        with a batch of calendula salve for my own kids' scraped knees. Everything here
+        is still made in small batches, by hand, in Burley, Idaho.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDER / CONTACT ============ -->
+<section class="order" id="order">
+  <div class="wrap order-inner">
+    <p class="eyebrow">Order</p>
+    <h2>How to get some</h2>
+    <p class="section-lede">
+      <!-- MOM: replace with your actual ordering method — Instagram DM, a form, a phone number, etc. -->
+      Message me directly to order — I'll confirm what's in stock and arrange pickup
+      or local delivery.
+    </p>
+    <div class="order-methods">
+      <a class="btn btn-primary" href="mailto:hello@example.com">Email to order</a>
+      <a class="btn btn-outline" href="https://instagram.com/" target="_blank" rel="noopener">Message on Instagram</a>
+    </div>
+    <p class="disclaimer">
+      These statements have not been evaluated by the FDA. This product is not
+      intended to diagnose, treat, cure, or prevent any disease.
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; <span id="year"></span> The Wild Olive Tree</span>
+    <span>Made by hand in Burley, Idaho</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
