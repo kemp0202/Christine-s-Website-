@@ -30,6 +30,9 @@
       <a href="#about">The maker</a>
       <a href="#order">Order</a>
     </nav>
+    <button class="cart-toggle" id="cartToggle" type="button" aria-expanded="false" aria-controls="cartPanel">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
   </div>
 </header>
 
@@ -44,7 +47,7 @@
         not machined. <!-- MOM: swap in a line about why you started this --> 
         This is medicine cabinet stuff made the way it used to be made.
       </p>
-      <a class="btn btn-primary" href="#order">See what's in stock</a>
+      <a class="btn btn-primary" href="#apothecary">See what's in stock</a>
     </div>
 
     <!-- signature element: a bottle rendered as a label, doubling as a nav anchor -->
@@ -71,21 +74,25 @@
     <p class="eyebrow">The apothecary</p>
     <h2>What's on the shelf</h2>
     <p class="section-lede">
-      Tap a card to flip it and see what's inside and how to use it.
+      Tap a card to flip it and see what's inside and how to use it, or add it straight to your cart.
     </p>
 
     <!-- MOM: for each product, put a photo (e.g. images/valerian.jpg) in an /images folder
          and set it as the img src below. Until that file exists, a placeholder box shows instead.
-         Each card is now a flip card: the front shows the photo/name/price, and clicking (or
-         tapping, or pressing Enter/Space when focused) flips it to show Ingredients and How to use
-         on the back. Edit the "Ingredients" and "How to use" text for each product directly below. -->
+         Each card is a flip card: the front shows the photo/name/price/Add to cart button, and
+         clicking the card itself (not the button) flips it to show Ingredients and How to use.
+
+         SHIPPING WEIGHTS: each <article class="product-card"> below has a data-weight="X" attribute
+         in ounces — this is the SHIPPED weight (product + jar/tin/bottle + packaging), not just the
+         net contents. These are placeholder estimates. Weigh an actual packaged product on a kitchen
+         scale and update data-weight for accurate shipping calculations. -->
 
     <!-- ---- CATEGORY: Tincture Combinations ---- -->
     <div class="category-group">
       <h3 class="category-title">Tincture Combinations</h3>
       <div class="product-grid">
 
-        <article class="product-card">
+        <article class="product-card" data-name="Sleep Support Blend" data-price="18" data-weight="4">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -97,6 +104,7 @@
                 <p class="product-mono">For rest · 1 oz</p>
               </div>
               <p class="product-price">$18</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -110,7 +118,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Immune Boost Blend" data-price="18" data-weight="4">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -122,6 +130,7 @@
                 <p class="product-mono">For immunity · 1 oz</p>
               </div>
               <p class="product-price">$18</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -135,7 +144,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Stress Relief Blend" data-price="18" data-weight="4">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -147,6 +156,7 @@
                 <p class="product-mono">For calm · 1 oz</p>
               </div>
               <p class="product-price">$18</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -168,7 +178,7 @@
       <h3 class="category-title">Single Herb Tinctures</h3>
       <div class="product-grid">
 
-        <article class="product-card">
+        <article class="product-card" data-name="Valerian Root" data-price="15" data-weight="4">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -180,6 +190,7 @@
                 <p class="product-mono">For rest · 1 oz</p>
               </div>
               <p class="product-price">$15</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -193,7 +204,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Elderberry" data-price="15" data-weight="4">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -205,6 +216,7 @@
                 <p class="product-mono">For immunity · 1 oz</p>
               </div>
               <p class="product-price">$15</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -218,7 +230,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Echinacea" data-price="15" data-weight="4">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -230,6 +242,7 @@
                 <p class="product-mono">For immune support · 1 oz</p>
               </div>
               <p class="product-price">$15</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -251,7 +264,7 @@
       <h3 class="category-title">Ointments &amp; Balms</h3>
       <div class="product-grid">
 
-        <article class="product-card">
+        <article class="product-card" data-name="Calendula Salve" data-price="14" data-weight="5">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -263,6 +276,7 @@
                 <p class="product-mono">For skin · 2 oz tin</p>
               </div>
               <p class="product-price">$14</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -276,7 +290,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Arnica Rub" data-price="15" data-weight="5">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -288,6 +302,7 @@
                 <p class="product-mono">For sore muscles · 2 oz tin</p>
               </div>
               <p class="product-price">$15</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -301,7 +316,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Lavender Balm" data-price="14" data-weight="5">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -313,6 +328,7 @@
                 <p class="product-mono">For dry skin · 2 oz tin</p>
               </div>
               <p class="product-price">$14</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -334,7 +350,7 @@
       <h3 class="category-title">Nutritional Greens</h3>
       <div class="product-grid">
 
-        <article class="product-card">
+        <article class="product-card" data-name="Wheatgrass Powder" data-price="16" data-weight="8">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -346,6 +362,7 @@
                 <p class="product-mono">Daily greens · 4 oz jar</p>
               </div>
               <p class="product-price">$16</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -359,7 +376,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Spirulina Greens Blend" data-price="18" data-weight="8">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -371,6 +388,7 @@
                 <p class="product-mono">Daily greens · 4 oz jar</p>
               </div>
               <p class="product-price">$18</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -392,7 +410,7 @@
       <h3 class="category-title">Teas</h3>
       <div class="product-grid">
 
-        <article class="product-card">
+        <article class="product-card" data-name="Chamomile Sleep Tea" data-price="12" data-weight="3">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -404,6 +422,7 @@
                 <p class="product-mono">For rest · loose leaf, 2 oz</p>
               </div>
               <p class="product-price">$12</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -417,7 +436,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-name="Digestive Tea" data-price="12" data-weight="3">
           <div class="card-inner">
             <div class="card-face card-front">
               <div class="product-photo">
@@ -429,6 +448,7 @@
                 <p class="product-mono">For digestion · loose leaf, 2 oz</p>
               </div>
               <p class="product-price">$12</p>
+              <button type="button" class="btn-add-cart">Add to cart</button>
               <p class="flip-hint">Tap for ingredients &amp; instructions</p>
             </div>
             <div class="card-face card-back">
@@ -505,12 +525,11 @@
     <p class="eyebrow">Order</p>
     <h2>How to get some</h2>
     <p class="section-lede">
-      <!-- MOM: replace with your actual ordering method — Instagram DM, a form, a phone number, etc. -->
-      Message me directly to order — I'll confirm what's in stock and arrange pickup
-      or local delivery.
+      Add what you'd like to your cart above, then check out there — pay with PayPal or
+      Venmo and send us your order so we know what to ship and where.
     </p>
     <div class="order-methods">
-      <a class="btn btn-primary" href="mailto:hello@example.com">Email to order</a>
+      <a class="btn btn-primary" href="#apothecary">Browse the apothecary</a>
       <a class="btn btn-outline" href="https://instagram.com/" target="_blank" rel="noopener">Message on Instagram</a>
     </div>
     <p class="disclaimer">
@@ -526,6 +545,78 @@
     <span>Made by hand in Burley, Idaho</span>
   </div>
 </footer>
+
+<!-- ============ CART ============ -->
+<!-- MOM: this is a "cart" in the sense that it adds up your order and shipping — there's no
+     real payment processing here (that would need a paid service or a backend server, which a
+     plain GitHub Pages site can't run). Instead: the customer sees the total, pays you directly
+     through PayPal or Venmo, then taps "Email my order" or "Copy order details" so you get their
+     items, address, and email. Treat an order as placed once you've received BOTH the payment
+     and the order details — not before. -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="Shopping cart">
+  <div class="cart-panel-header">
+    <h2>Your cart</h2>
+    <button type="button" class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your cart is empty.</p>
+  </div>
+
+  <div class="cart-summary">
+    <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+    <div class="cart-row"><span>Shipping</span><span id="cartShipping">—</span></div>
+    <div class="cart-row cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <!-- MOM: shipping tiers are set in script.js — search for "SHIPPING RULES" to edit them. -->
+    <p class="cart-shipping-note">Free shipping on orders over $80. Otherwise calculated by package weight.</p>
+  </div>
+
+  <form class="cart-checkout-form" id="checkoutForm">
+    <h3>Shipping details</h3>
+    <label>Full name
+      <input type="text" id="custName" required>
+    </label>
+    <label>Email
+      <input type="email" id="custEmail" required>
+    </label>
+    <label>Street address
+      <input type="text" id="custAddress1" required>
+    </label>
+    <label>Apt / suite (optional)
+      <input type="text" id="custAddress2">
+    </label>
+    <div class="cart-form-row">
+      <label>City
+        <input type="text" id="custCity" required>
+      </label>
+      <label>State
+        <input type="text" id="custState" required maxlength="2" placeholder="ID">
+      </label>
+      <label>ZIP
+        <input type="text" id="custZip" required inputmode="numeric">
+      </label>
+    </div>
+
+    <h3>Pay &amp; submit order</h3>
+    <p class="cart-pay-note">
+      1. Pay the total above using one of the buttons below.<br>
+      2. Then tap "Email my order" (or "Copy order details") so we know what to ship and where.<br>
+      Your order isn't confirmed until we've received both the payment and your order details.
+    </p>
+    <!-- MOM: replace PAYPAL_USERNAME and VENMO_USERNAME in script.js with your real usernames
+         (search for "PAYPAL_USERNAME" near the top of the file). -->
+    <div class="cart-pay-buttons">
+      <a id="paypalBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">Pay with PayPal</a>
+      <a id="venmoBtn" class="btn btn-outline" href="#" target="_blank" rel="noopener">Pay with Venmo</a>
+    </div>
+    <div class="cart-submit-buttons">
+      <button type="button" class="btn btn-outline" id="emailOrderBtn">Email my order</button>
+      <button type="button" class="btn btn-outline" id="copyOrderBtn">Copy order details</button>
+    </div>
+    <p class="cart-form-status" id="cartFormStatus" role="status"></p>
+  </form>
+</aside>
 
 <script src="script.js"></script>
 </body>
