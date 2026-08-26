@@ -217,6 +217,17 @@ img { max-width: 100%; display: block; }
 .apothecary h2 { color: var(--color-parchment); }
 .apothecary .section-lede { color: rgba(239,231,210,0.75); margin-bottom: 2.4em; }
 
+.category-group + .category-group {
+  margin-top: 48px;
+}
+.category-title {
+  font-size: 1.15rem;
+  color: var(--color-parchment);
+  border-bottom: 1.5px solid var(--color-sage);
+  padding-bottom: 10px;
+  margin-bottom: 22px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -229,6 +240,30 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   padding: 22px;
   border: 1.5px solid var(--color-forest-deep);
+}
+.product-photo {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: -22px -22px 16px;
+  background: var(--color-glass-dark);
+}
+.product-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-photo.is-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-photo.is-empty img { display: none; }
+.product-photo.is-empty::after {
+  content: "photo goes here";
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-parchment);
 }
 .product-label { border-bottom: 1px dashed rgba(35,48,31,0.3); padding-bottom: 12px; margin-bottom: 12px; }
 .product-eyebrow {
