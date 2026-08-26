@@ -73,51 +73,218 @@
       Tap a label for what's inside, what it's for, and how to use it.
     </p>
 
-    <div class="product-grid">
+    <!-- MOM: for each product, put a photo (e.g. images/valerian.jpg) in an /images folder
+         and set it as the img src below. Until that file exists, a placeholder box shows instead. -->
 
-      <article class="product-card">
-        <div class="product-label">
-          <span class="product-eyebrow">Tincture</span>
-          <h3>Valerian Root</h3>
-          <p class="product-mono">For rest · 1 oz</p>
-        </div>
-        <p class="product-note">Wild-harvested root, steeped 6 weeks in cane alcohol.</p>
-        <p class="product-price">$18</p>
-      </article>
+    <!-- ---- CATEGORY: Tincture Combinations ---- -->
+    <div class="category-group">
+      <h3 class="category-title">Tincture Combinations</h3>
+      <div class="product-grid">
 
-      <article class="product-card">
-        <div class="product-label">
-          <span class="product-eyebrow">Tincture</span>
-          <h3>Elderberry</h3>
-          <p class="product-mono">For immunity · 1 oz</p>
-        </div>
-        <p class="product-note">Organic elderberry, clove, and a touch of raw honey.</p>
-        <p class="product-price">$16</p>
-      </article>
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/sleep-blend.jpg" alt="Sleep Support Blend tincture" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Tincture Combination</span>
+            <h3>Sleep Support Blend</h3>
+            <p class="product-mono">For rest · 1 oz</p>
+          </div>
+          <p class="product-note">Valerian, passionflower, and lemon balm.</p>
+          <p class="product-price">$18</p>
+        </article>
 
-      <article class="product-card">
-        <div class="product-label">
-          <span class="product-eyebrow">Ointment</span>
-          <h3>Calendula Salve</h3>
-          <p class="product-mono">For skin · 2 oz tin</p>
-        </div>
-        <p class="product-note">Calendula-infused olive oil, beeswax, a little lavender.</p>
-        <p class="product-price">$14</p>
-      </article>
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/immune-blend.jpg" alt="Immune Boost Blend tincture" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Tincture Combination</span>
+            <h3>Immune Boost Blend</h3>
+            <p class="product-mono">For immunity · 1 oz</p>
+          </div>
+          <p class="product-note">Elderberry, echinacea, and clove.</p>
+          <p class="product-price">$18</p>
+        </article>
 
-      <article class="product-card">
-        <div class="product-label">
-          <span class="product-eyebrow">Ointment</span>
-          <h3>Arnica Rub</h3>
-          <p class="product-mono">For sore muscles · 2 oz tin</p>
-        </div>
-        <p class="product-note">Arnica flower, cayenne, and menthol crystal.</p>
-        <p class="product-price">$15</p>
-      </article>
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/calm-blend.jpg" alt="Stress Relief Blend tincture" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Tincture Combination</span>
+            <h3>Stress Relief Blend</h3>
+            <p class="product-mono">For calm · 1 oz</p>
+          </div>
+          <p class="product-note">Ashwagandha, holy basil, and lemon balm.</p>
+          <p class="product-price">$18</p>
+        </article>
 
-      <!-- MOM: duplicate the <article class="product-card">…</article> block above for more items -->
-
+      </div>
     </div>
+
+    <!-- ---- CATEGORY: Single Herb Tinctures ---- -->
+    <div class="category-group">
+      <h3 class="category-title">Single Herb Tinctures</h3>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/valerian.jpg" alt="Valerian Root tincture" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Single Herb Tincture</span>
+            <h3>Valerian Root</h3>
+            <p class="product-mono">For rest · 1 oz</p>
+          </div>
+          <p class="product-note">Wild-harvested root, steeped 6 weeks in cane alcohol.</p>
+          <p class="product-price">$15</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/elderberry.jpg" alt="Elderberry tincture" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Single Herb Tincture</span>
+            <h3>Elderberry</h3>
+            <p class="product-mono">For immunity · 1 oz</p>
+          </div>
+          <p class="product-note">Organic elderberry, slow-steeped whole.</p>
+          <p class="product-price">$15</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/echinacea.jpg" alt="Echinacea tincture" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Single Herb Tincture</span>
+            <h3>Echinacea</h3>
+            <p class="product-mono">For immune support · 1 oz</p>
+          </div>
+          <p class="product-note">Root and flower, harvested at peak potency.</p>
+          <p class="product-price">$15</p>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ---- CATEGORY: Ointments & Balms ---- -->
+    <div class="category-group">
+      <h3 class="category-title">Ointments &amp; Balms</h3>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/calendula.jpg" alt="Calendula Salve" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Ointment</span>
+            <h3>Calendula Salve</h3>
+            <p class="product-mono">For skin · 2 oz tin</p>
+          </div>
+          <p class="product-note">Calendula-infused olive oil, beeswax, a little lavender.</p>
+          <p class="product-price">$14</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/arnica.jpg" alt="Arnica Rub" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Ointment</span>
+            <h3>Arnica Rub</h3>
+            <p class="product-mono">For sore muscles · 2 oz tin</p>
+          </div>
+          <p class="product-note">Arnica flower, cayenne, and menthol crystal.</p>
+          <p class="product-price">$15</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/lavender-balm.jpg" alt="Lavender Balm" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Ointment</span>
+            <h3>Lavender Balm</h3>
+            <p class="product-mono">For dry skin · 2 oz tin</p>
+          </div>
+          <p class="product-note">Lavender-infused shea butter and beeswax.</p>
+          <p class="product-price">$14</p>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ---- CATEGORY: Nutritional Greens ---- -->
+    <div class="category-group">
+      <h3 class="category-title">Nutritional Greens</h3>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/wheatgrass.jpg" alt="Wheatgrass Powder" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Nutritional Greens</span>
+            <h3>Wheatgrass Powder</h3>
+            <p class="product-mono">Daily greens · 4 oz jar</p>
+          </div>
+          <p class="product-note">Home-grown and dehydrated at low heat.</p>
+          <p class="product-price">$16</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/greens-blend.jpg" alt="Spirulina Greens Blend" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Nutritional Greens</span>
+            <h3>Spirulina Greens Blend</h3>
+            <p class="product-mono">Daily greens · 4 oz jar</p>
+          </div>
+          <p class="product-note">Spirulina, chlorella, and wheatgrass powder.</p>
+          <p class="product-price">$18</p>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ---- CATEGORY: Teas ---- -->
+    <div class="category-group">
+      <h3 class="category-title">Teas</h3>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/chamomile-tea.jpg" alt="Chamomile Sleep Tea" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Tea</span>
+            <h3>Chamomile Sleep Tea</h3>
+            <p class="product-mono">For rest · loose leaf, 2 oz</p>
+          </div>
+          <p class="product-note">Chamomile, lavender, and lemon balm.</p>
+          <p class="product-price">$12</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="images/digestive-tea.jpg" alt="Digestive Tea" onerror="this.closest('.product-photo').classList.add('is-empty')">
+          </div>
+          <div class="product-label">
+            <span class="product-eyebrow">Tea</span>
+            <h3>Digestive Tea</h3>
+            <p class="product-mono">For digestion · loose leaf, 2 oz</p>
+          </div>
+          <p class="product-note">Peppermint, ginger, and fennel seed.</p>
+          <p class="product-price">$12</p>
+        </article>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
