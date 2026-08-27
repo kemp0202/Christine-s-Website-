@@ -268,7 +268,7 @@ img { max-width: 100%; display: block; }
    .card-front / .card-back are the two faces stacked on top of each other. */
 .product-card {
   position: relative;
-  height: 420px;
+  height: 450px;
   perspective: 1400px;
   cursor: pointer;
 }
@@ -308,7 +308,9 @@ img { max-width: 100%; display: block; }
 }
 
 .product-photo {
-  aspect-ratio: 4 / 3;
+  /* Keep wide grid items from making the photo tall enough to push the
+     price and cart button outside the card's fixed-height flip scene. */
+  height: clamp(160px, 18vw, 190px);
   border-radius: var(--radius);
   overflow: hidden;
   margin: -22px -22px 16px;
@@ -344,6 +346,8 @@ img { max-width: 100%; display: block; }
 .product-mono { font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-forest); margin: 0; }
 .product-note { font-size: 0.9rem; color: var(--color-forest); }
 .product-price { font-family: var(--font-mono); font-weight: 500; margin: 0; }
+.card-front .product-price,
+.btn-add-cart { flex-shrink: 0; }
 
 .btn-add-cart {
   font-family: var(--font-mono);
@@ -362,6 +366,7 @@ img { max-width: 100%; display: block; }
 
 .flip-hint {
   margin-top: auto;
+  margin-bottom: 0;
   padding-top: 10px;
   font-family: var(--font-mono);
   font-size: 0.7rem;
